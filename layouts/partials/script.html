@@ -1,0 +1,8 @@
+
+{{ with .Site.Data.webpack_assets.main.js }}
+<script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
+{{ end }}
+
+{{- if .Site.GoogleAnalytics }}
+    {{ template "_internal/google_analytics.html" . }}
+{{- end}}
