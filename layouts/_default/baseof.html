@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
-    <body class="w-100 center">
-        <main class="mw9 center flex flex-column">
-            {{- partial "header.html" . -}}
-            <div id="content" class="flex-auto">
-            {{- block "main" . }}{{- end }}
-        
-            {{.Site.Data.webpack_assets.main.css}} 
-                
-            </div>
-            {{- partial "footer.html" . -}}
 
+    <body class="w-100 center">
+        <div id="container" class="mw9 center">
+            {{- partial "header.html" . -}}
+            {{- partial "navigation.html" . -}}
+            <main class="">
+                {{ block "main" . }}{{ end }}
+            </main>
+            {{- partial "footer.html" . -}}    
             {{- partial "script.html" -}}
-        </main>
+        </div>
     </body>
 </html>
