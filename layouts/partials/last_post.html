@@ -1,0 +1,15 @@
+{{ define "lastPost"}}
+    {{/* Get all page in  mainSections param or posts as default*/}}
+    {{ $mainSections := site.Params.mainSections | default (slice "posts") }}
+    {{/* Get all page by mainSections order by param order */}}
+    {{ range $m := $mainSections }}
+        {{ $pages := where site.RegularPages "Type" "in" $m }}
+            <hr>
+            {{ range $pages }}
+                {{ .Title }}
+            {{ end }}
+            <hr>
+
+    {{ end }}
+    
+{{ end }}
