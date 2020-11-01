@@ -4,12 +4,18 @@
     {{/* Get all page by mainSections order by param order */}}
     {{ range $m := $mainSections }}
         {{ $pages := where site.RegularPages "Type" "in" $m }}
-            <hr>
-            {{ range $pages }}
-                {{ .Title }}
+            {{ range $pages }}            
+            <article>
+                <header>
+                    <h2>{{ .Title }}</h2>
+                    <time datetime="{{ .Date }}">{{ .Date.Format "02 January 2006" }}</time>
+                    <span>
+                        {{ range .Params.tags}}
+                            {{ . }}
+                        {{ end }}
+                    </span>
+                </header>                
+            </article>                
             {{ end }}
-            <hr>
-
-    {{ end }}
-    
+    {{ end }}    
 {{ end }}
