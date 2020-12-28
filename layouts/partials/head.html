@@ -3,11 +3,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="{{ .Site.BaseURL }}">
+    <meta name="Description" content="{{ .Site.Params.meta_description }}">
     <title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
+
+    <link rel="dns-prefetch" href="https://kit.fontawesome.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdn.iubenda.com">
+    <link rel="dns-prefetch" href="https://ka-f.fontawesome.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com ">
+    <link rel="dns-prefetch" href="https://www.iubenda.com">
+    <link rel="dns-prefetch" href="https://licensebuttons.net">
+    <link rel="dns-prefetch" href="https://cdn.iubenda.com">
+    <link rel="dns-prefetch" href="https://hits-i.iubenda.com/">
    
     {{ block "style" .}}
     {{ with .Site.Data.webpack_assets.main.css }}
-      <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
+      <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet" media="screen">
     {{ end }}
 
     {{/* Fontawesome */}}

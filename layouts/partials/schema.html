@@ -24,6 +24,8 @@
       "keywords": [{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}]
     }
     {{ end }}
+  </script>
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
