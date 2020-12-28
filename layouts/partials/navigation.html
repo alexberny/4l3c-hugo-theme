@@ -1,6 +1,14 @@
-<nav class="sidebar-nav">
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-    {{ end }}
+<nav id="mainMenu" class="w-100 w-50-l center dt pv4 pv3-l ph3 ph0-l db bb border-box" role="navigation">
+    <div class="w-100 w-70-l db dtc-l">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <a class="sidebar-nav-item {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}} ph2 link dark-gray hover-blue" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        {{ end }}
+    </div>
+    <div class="w-100 w-30-l db dtc-l tr-l mt3 mv0-l">
+        <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
 </nav>

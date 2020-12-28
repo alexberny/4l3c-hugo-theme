@@ -2,15 +2,15 @@
 <html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
 
-    <body class="w-100 center">
-        <div id="container" class="mw9 center">
+    <body class="w-100 debug-grid">
+        <!-- <div id="container" class="mw7 center"> -->
             {{- partial "header.html" . -}}
             {{- partial "navigation.html" . -}}
-            <main class="">
+            <main class="w-100 w-50-l center ph3 ph0-l">
                 {{ block "main" . }}{{ end }}
             </main>
             {{- partial "footer.html" . -}}    
-            {{- partial "script.html" -}}
-        </div>
+            {{- partial "script.html" . -}}
+        <!-- </div> -->
     </body>
 </html>

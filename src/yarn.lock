@@ -2857,6 +2857,13 @@ safer-buffer@^2.0.2, safer-buffer@^2.1.0, safer-buffer@~2.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+sass-fonts@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/sass-fonts/-/sass-fonts-3.0.2.tgz#1672fb5db216cec863719d51476874c65fc49457"
+  integrity sha512-o29c9XWNNKUujL3Clph+ZE/3tMC8wSHw+Jf7SkVvk5vc0dZbtQhnSF9J5soHKK1yoiGS6WrJE1mTMErr1xl8lQ==
+  dependencies:
+    sass-mq "^5.0.1"
+
 sass-graph@2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/sass-graph/-/sass-graph-2.2.5.tgz#a981c87446b8319d96dce0671e487879bd24c2e8"
@@ -2877,6 +2884,11 @@ sass-loader@^10.0.4:
     neo-async "^2.6.2"
     schema-utils "^3.0.0"
     semver "^7.3.2"
+
+sass-mq@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/sass-mq/-/sass-mq-5.0.1.tgz#42c711e657d884ff6a1bb4d405dfb6f08a7dc622"
+  integrity sha512-ugSVZO5fzasSFrGfKCtY02spnkOOfo9U9sXuzCuSXoCl1CgcoqdJRdNmigZkhvRVph1GKM6o0pgI00Jjc445CA==
 
 schema-utils@^2.6.5:
   version "2.7.1"

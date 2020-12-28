@@ -1,8 +1,11 @@
 {{ define "main" }}
-    <article class="homepage-content">
+    <section class="homepage-content">
+        <header>
+            <h2>Ultimi articoli</h2>
+        </header>
     <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-    {{.Content}}
-    </article>
+        {{.Content}}
+    </section>
     <div class="last-post">
         {{ block "lastPost" . }}{{ end }}
     </div>

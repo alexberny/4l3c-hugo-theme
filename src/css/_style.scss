@@ -1,7 +1,19 @@
-/* test */
-.classe {
-    text-align: center;
-    .red {
-        color: red;
+.post-content{
+    a {
+        color: var(--blue);
+        opacity: 1;
+        transition: opacity .15s ease-in;
+        text-decoration: none;
     }
+
+    a:hover,
+    a:focus{
+        opacity: .5;
+        transition: opacity .15s ease-in;
+    }
+}
+
+.site-name {
+    background-color: var(--blue);
+    color: var(--white);
 }

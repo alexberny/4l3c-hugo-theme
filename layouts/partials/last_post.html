@@ -5,13 +5,16 @@
     {{ range $m := $mainSections }}
         {{ $pages := where site.RegularPages "Type" "in" $m }}
             {{ range $pages }}            
-            <article>
+            <article class="mv5 bb pb3">
                 <header>
-                    <h2>{{ .Title }}</h2>
-                    <time datetime="{{ .Date }}">{{ .Date.Format "02 January 2006" }}</time>
+                    <h2 class="f2 lh-copy"><a href="{{ .Permalink }}" class="db link dim blue">{{ .Title }}</a></h2>
+                    <span class="mr5">                        
+                        <i class="far fa-calendar-alt"></i> <time datetime="{{ .Date.Format "2006-01-02T15:04:05-08:00"}}">{{ .Date.Format "02 January 2006" }}</time>
+                    </span>
                     <span>
+                        <i class="fas fa-tags"></i> 
                         {{ range .Params.tags}}
-                            {{ . }}
+                            <a href="tags/{{ . | urlize }}" class="link dim blue">{{ . }}</a>
                         {{ end }}
                     </span>
                 </header>                
