@@ -1,12 +1,12 @@
 <footer class="bg-near-black white-80 pv4 pv3-l ph3 ph0-l db bb border-box">
    <div class="w-100 w-50-l center">
       <div>
-         <a href="https://www.iubenda.com/privacy-policy/13294331" class="iubenda-white iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-         <a href="https://www.iubenda.com/privacy-policy/13294331/cookie-policy" class="iubenda-white iubenda-embed" title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+         <a href="https://www.iubenda.com/privacy-policy/{{ .Site.Params.ibenda_cookiePolicyId }}" class="iubenda-white iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+         <a href="https://www.iubenda.com/privacy-policy/{{ .Site.Params.ibenda_cookiePolicyId }}/cookie-policy" class="iubenda-white iubenda-embed" title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 
       </div>
       <div class="mv1">
-         <p>4l3c a.k.a. Alessandro Bernardi - {{ now.Format "2006" }}</p>
+         <p>{{ .Site.Title }}  {{ .Site.Params.subtitle }} - {{ now.Format "2006" }}</p>
          <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Eccetto ove diversamente indicato, quest'opera è distribuita con Licenza <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class="link dim blue">Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale</a>.</p>
       </div>
       <div class="mv2 pt2">
