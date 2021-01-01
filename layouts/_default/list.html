@@ -1,25 +1,23 @@
 {{ define "main" }}
-<article>
-    <header>
-        <h1>{{.Title}}</h1>
-    </header>
-    <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
-    {{.Content}}
-    
-    {{ range .Pages.GroupByDate "2006" }}
-    <h2>{{ .Key }}</h2>
-    
-    <ul class="list">
-        <!-- Ranges through content/posts/*.md -->
-        {{ range .Pages }}
-        <li>
-            {{ .Date.Day }} {{ index $.Site.Data.mesi (printf "%d" .Date.Month) }} 
-             <a href="{{.Permalink}}" class="link dim blue">{{.Title}}</a>
-        </li>
-        {{ end }}
-    </ul>
-    
-    {{ end }}
-</article>
+    <article>
+        <header>
+            <h1>{{.Title}}</h1>
+        </header>
+        <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+        {{.Content}}
 
+        {{ range .Pages.GroupByDate "2006" }}
+        <h2>{{ .Key }}</h2>
+
+        <ul class="list">
+            <!-- Ranges through content/posts/*.md -->
+            {{ range .Pages }}
+            <li>
+                {{ .Date.Day }} {{ index $.Site.Data.mesi (printf "%d" .Date.Month) }} 
+                <a href="{{.Permalink}}" class="link dim blue">{{.Title}}</a>
+            </li>
+            {{ end }}
+        </ul>    
+        {{ end }}
+    </article>
 {{ end }}
