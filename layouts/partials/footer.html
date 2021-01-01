@@ -1,9 +1,28 @@
 <footer class="bg-near-black white-80 pv4 pv3-l ph3 ph0-l db bb border-box">
    <div class="w-100 w-50-l center">
       <div>
+         {{ if .Site.Params.facebook}}
+         <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.facebook }}" target="_blank" rel="nofollow, noreferrer" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+         {{ end }}
+         {{ if .Site.Params.twitter }}
+         <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.twitter }}" target="_blank" rel="nofollow, noreferrer" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+         {{ end }}
+         {{ if .Site.Params.linkedin }}
+         <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.linkedin }}" target="_blank" rel="nofollow, noreferrer" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
+         {{ end }}
+         {{ if .Site.Params.youtube }}
+         <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.youtube }}" target="_blank" rel="nofollow, noreferrer" aria-label="youtube"><i class="fab fa-youtube"></i></a>
+         {{ end }}
+         {{ if .Site.Params.github }}
+         <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.github }}" target="_blank" rel="nofollow, noreferrer" aria-label="github"><i class="fab fa-github"></i></a>
+         {{ end }}
+         {{ if .Site.Params.mastodon }}
+         <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.mastodon }}" target="_blank" rel="nofollow, noreferrer" aria-label="mastodon"><i class="fab fa-mastodon"></i></a>
+         {{ end }}
+      </div>
+      <div>
          <a href="https://www.iubenda.com/privacy-policy/{{ .Site.Params.ibenda_cookiePolicyId }}" class="iubenda-white iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
          <a href="https://www.iubenda.com/privacy-policy/{{ .Site.Params.ibenda_cookiePolicyId }}/cookie-policy" class="iubenda-white iubenda-embed" title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-
       </div>
       <div class="mv1">
          <p>{{ .Site.Title }}  {{ .Site.Params.subtitle }} - {{ now.Format "2006" }}</p>

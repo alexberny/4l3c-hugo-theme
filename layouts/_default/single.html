@@ -3,7 +3,7 @@
     <header>
       <h1>{{ .Title }}</h1>
       <span class="db dib-l mt2 w-50-l">                        
-        <i class="far fa-calendar-alt"></i> <time datetime="{{ .Date.Format "2006-01-02T15:04:05-08:00"}}">{{ .Date.Format "02 January 2006" }}</time>
+        <i class="far fa-calendar-alt"></i> <time datetime="{{ .Date.Format "2006-01-02T15:04:05-08:00"}}">{{ .Date.Day }} {{ index $.Site.Data.mesi (printf "%d" .Date.Month) }} {{ .Date.Year }}</time>
       </span>
       <span class="db dib-l mt2 tr-l">
           <i class="fas fa-tags"></i> 
