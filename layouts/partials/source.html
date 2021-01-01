@@ -1,0 +1,6 @@
+<div class="source">
+    {{ .Title }} - source: {{ .File.LogicalName }} - Lastmod: {{ .Lastmod }} {{ .GitInfo |jsonify }} {{ .File.ContentBaseName }}
+    <br />
+    <p>Page: {{ .Page.Dir }} {{ .Page.Lastmod }}</p>
+    <p>File: {{ .File.Path }} - md5 checksum {{ .File.UniqueID }} </p>
+</div>
