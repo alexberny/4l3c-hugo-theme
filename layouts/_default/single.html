@@ -7,8 +7,8 @@
       </span>
       <span class="db dib-l mt2 tr-l">
           <i class="fas fa-tags"></i> 
-          {{ range .Params.tags}}
-              <a href="tags/{{ . | urlize }}" class="link dim blue">{{ . }}</a>
+          {{ range $k, $v := .Params.tags}}
+          {{ if $k }} \ {{ end }}<a href="tags/{{ $v | urlize }}" class="link dim blue">{{ $v }}</a>
           {{ end }}
       </span>
     </header> 
@@ -20,4 +20,6 @@
   {{ if ne .Params.show_comments false }}
     {{ template "partials/disqus.html" . }}
   {{ end }}
+
+  {{- partial "source.html" . -}}
 {{ end }}

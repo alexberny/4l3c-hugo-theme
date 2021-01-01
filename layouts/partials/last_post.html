@@ -13,8 +13,8 @@
                     </span>
                     <span>
                         <i class="fas fa-tags"></i> 
-                        {{ range .Params.tags}}
-                            <a href="tags/{{ . | urlize }}" class="link dim blue">{{ . }}</a>
+                        {{ range $k, $v := .Params.tags}}
+                        {{ if $k }} \ {{ end }}<a href="tags/{{ $v | urlize }}" class="link dim blue">{{ $v }}</a>
                         {{ end }}
                     </span>
                 </header>                
