@@ -15,6 +15,9 @@
         {{ if .Site.Params.linkedin }}
         <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.linkedin }}" target="_blank" rel="nofollow, noreferrer" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
         {{ end }}
+        {{ if .Site.Params.mastodon }}
+        <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.mastodon }}" target="_blank" rel="nofollow, noreferrer" aria-label="mastodon"><i class="fab fa-mastodon"></i></a>
+        {{ end }}
         {{ if .Site.Params.youtube }}
         <a class="link ph2 dark-gray hover-blue" href="{{ .Site.Params.youtube }}" target="_blank" rel="nofollow, noreferrer" aria-label="youtube"><i class="fab fa-youtube"></i></a>
         {{ end }}
