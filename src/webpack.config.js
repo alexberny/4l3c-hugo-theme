@@ -3,6 +3,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = (env, argv) => {
     const devMode = argv.mode !== 'production';
@@ -30,15 +31,23 @@ module.exports = (env, argv) => {
                 {
                     test: /\.(sa|sc|c)ss$/,
                     use: [
-                        devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 
+                        //devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 
+                        MiniCssExtractPlugin.loader,
                         {
                             loader: 'css-loader',
                             options: {
-                                importLoaders: 1
+                                importLoaders: 0,                                
                             }
                         },
                         'postcss-loader',
-                        'sass-loader',
+                        {
+                            loader: 'sass-loader',
+                            options : {
+                                sassOptions: {
+                                    outputStyle: 'expanded',
+                                }
+                            }
+                        },
                     ]
                 }
 
@@ -62,8 +71,14 @@ module.exports = (env, argv) => {
                 filename: 'webpack_assets.json',
                 path: path.join(__dirname, '../data'),
                 removeFullPathAutoPrefix: true,
-                prettyPrint: true
+                prettyPrint: false
             }),
-        ]
+        ],
+
+        optimization: {
+            minimizer: [
+              new CssMinimizerPlugin(),
+            ],
+          },
     }
 }
